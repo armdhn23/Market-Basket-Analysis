@@ -58,7 +58,7 @@ inspect_rules <- inspect(sort(rules))
 #plot graph
 plot(sort(rules, by="lift"), method="graph", control=list("items"))
 
-#misal hanya ingin melihat lhs nya untuk penyakit tertentu, contoh penyakit PERADANGAN EPIGLOTIS, TELINGA TENGAH, ISPA DAN LARINGOTRAKEITIS (RINGAN)
+#misal hanya ingin melihat lhs nya untuk penyakit tertentu, contoh penyakit dengan kode P15
 rules2 <- apriori(trans, parameter = list(supp=0.2, conf=0.2),
                   appearance = list(default="rhs", lhs="P15"))
 rules2
